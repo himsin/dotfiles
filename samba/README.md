@@ -1,6 +1,6 @@
 Starting services
 
-To provide basic file sharing through SMB start/enable smbd.service and/or nmbd.service services.The nmbd.service service may not always be required.
+To provide basic file sharing through SMB start/enable smbd.service and/or nmbd.service (no need to start/enable nmbd service) services.The nmbd.service service may not always be required.
 
 Tip: Instead of having the service running since boot, you can enable smbd.socket so the daemon is started on the first incoming connection. Do not forget to disable smbd.service.
 Creating usershare path
@@ -10,28 +10,28 @@ Note: This is an optional feature. Skip this section if you do not need it.
 This creates the usershare directory in /var/lib/samba
 
 ```
-mkdir -p /var/lib/samba/usershare
+sudo mkdir -p /var/lib/samba/usershare
 ```
 
 This creates the group sambashare:
 
 ```
-groupadd -r sambashare
+sudo groupadd -r sambashare
 ```
 
 This changes the owner of the directory to root and the group to sambashare:
 
 ```
-chown root:sambashare /var/lib/samba/usershare
+sudo chown root:sambashare /var/lib/samba/usershare
 ```
 
 This changes the permissions of the usershare directory so that users in the group sambashare can read, write and execute files:
 
 ```
-chmod 1770 /var/lib/samba/usershare
+sudo chmod 1770 /var/lib/samba/usershare
 ```
 
-Set the following parameters in the smb.conf configuration file:
+Set the following parameters in the smb.conf configuration file (already added in my conf):
 
 /etc/samba/smb.conf
 ```
@@ -47,7 +47,7 @@ Set the following parameters in the smb.conf configuration file:
 Add your user to the sambashare group. Replace your_username with the name of your user:
 
 ```
-gpasswd sambashare -a your_username
+sudo gpasswd sambashare -a your_username
 ```
 
 Restart smbd.service and nmbd.service services.
@@ -60,5 +60,5 @@ Samba requires a Linux user account - you may use an existing user account or cr
 Although the user name is shared with Linux system, Samba uses a password separate from that of the Linux user accounts. Replace samba_user with the chosen Samba user account:
 
 ```
-smbpasswd -a samba_user
+sudo smbpasswd -a samba_user
 ```
