@@ -22,7 +22,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=26
+PreloadWeight=36
 SystrayContainmentId=6
 
 [Containments][1][Applets][61]
@@ -71,6 +71,17 @@ showWindowTitle=false
 DialogHeight=747
 DialogWidth=1366
 
+[Containments][1][Applets][65]
+immutability=1
+plugin=org.kde.plasma.lock_logout
+
+[Containments][1][Applets][65][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][1][Applets][65][Configuration][General]
+show_lockScreen=false
+
 [Containments][1][ConfigDialog]
 DialogHeight=590
 DialogWidth=450
@@ -80,7 +91,7 @@ PreloadWeight=0
 
 [Containments][1][General]
 advanced=true
-appletOrder=62;5;61;63
+appletOrder=62;5;61;65;63
 autoDecreaseIconSize=false
 backgroundOnlyOnMaximized=true
 disablePanelShadowForMaximized=true
@@ -169,7 +180,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][6][Applets][11][Configuration]
-PreloadWeight=0
+PreloadWeight=10
 
 [Containments][6][Applets][12]
 immutability=1
