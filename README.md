@@ -10,3 +10,6 @@ formats s16ne, s16re, s24ne, s24re, s24-32ne, s24-32re, s32ne, s32re,
 float32ne, float32re (for native, resp. reverse endian) are available
 
 More Info: https://forum.manjaro.org/t/solved-terrible-sound-in-linux-much-better-in-windows/8203/33
+
+<h2>smplayer</h2>
+<p>Use .config/smplayer/smplayer.ini
