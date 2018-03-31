@@ -11,9 +11,8 @@ float32ne, float32re (for native, resp. reverse endian) are available
 
 More Info: https://forum.manjaro.org/t/solved-terrible-sound-in-linux-much-better-in-windows/8203/33
 
-<h2>smplayer</h2>
-i<p>Use .config/smplayer/smplayer.ini
+<h2>smplayer and vlc</h2>
+<p>Use .config/smplayer/smplayer.ini, .config/vlc/vlcrc
 
 <h2>qBittorrent</h2>
 <p>Use .config/qBittorrent/qBittorrent.conf
-
