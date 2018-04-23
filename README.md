@@ -1,6 +1,9 @@
 # dotfiles
 my personal dotfiles
 
+<h2>Setting bluetooth audio as default in KDE Plasma 5</h2>
+<p>Connect the device. Press Alt+Space, search for Phonon, and bring up the "Phonon audio and video" settings. Under the device preference tab, adjust the order of audio source, and you might want to just sort one list and click "apply device list to...".
+
 <h2>pulse config</h2>
 <p>it won't work for all, so you may try out float32le instead or any of default sampling formats:
 s16le, s16be, s24le, s24be, s24-32le, s24-32be, s32le, s32be float32le, float32be, ulaw, alaw
