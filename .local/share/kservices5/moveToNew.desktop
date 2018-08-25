@@ -9,5 +9,5 @@ Encoding=UTF-8
 [Desktop Action moveToNew]
 Name=New folder with selection
 Icon=albumfolder-new
-Exec=dir_name="$(kdialog --inputbox 'Enter new directory name' new_selection_dir)"; [ ! -z "$dir_name" ] && (error="$(mkdir $PWD/$dir_name 2>&1)"; [ ! -z "$error" ] && kdialog --error "$error" || mv %U $PWD/$dir_name/.)
+Exec=dir_name="$(kdialog --inputbox 'Enter new directory name' new_selection_dir)"; [ ! -z "$dir_name" ] && (error=`mkdir "$PWD"/"$dir_name" 2>&1`; [ ! -z "$error" ] && kdialog --error "$error" || mv %U "$PWD"/"$dir_name"/.)
 #Exec=error="$(mkdir $PWD/new_selection_dir 2>&1)"; [ ! -z "$error" ] && kdialog --error "$error" || (echo "%U" | sed 's# /#\\n/#g' | while read url; do kdemv5 "$url" $PWD/new_selection_dir/.; done)
